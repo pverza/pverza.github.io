@@ -17,6 +17,8 @@
       <div id="unityContainer"></div>
     </div>
     <script>
+	 window.onresize = function(){ getOrientation(); }
+	 
     var mywidth = innerWidth;
     var myheight = innerHeight;
 	//if protrait calculate as landscape
@@ -28,6 +30,26 @@
 		
         document.getElementById("unityContainer").style.width = mywidth + "px";
         document.getElementById("unityContainer").style.height = myheight + "px";
+		
+function getOrientation(){
+    var orientation = window.innerWidth > window.innerHeight ? "Landscape" : "Portrait";
+	
+	    var mywidth = innerWidth;
+    var myheight = innerHeight;
+	//if protrait calculate as landscape
+	if(myheight > mywidth){
+		mywidth = innerHeight;
+		myheight = innerWidth;
+	}
+	//var tmpwidth = (myheight*16)/9;
+		
+        document.getElementById("unityContainer").style.width = mywidth + "px";
+        document.getElementById("unityContainer").style.height = myheight + "px";
+	
+    return orientation;
+}
+
+
     </script>
   </body>
 </html>
