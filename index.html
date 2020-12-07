@@ -19,7 +19,14 @@
     <script>
     var mywidth = innerWidth;
     var myheight = innerHeight;
-        document.getElementById("unityContainer").style.width = mywidth + "px";
+	//if protrait calculate as landscape
+	if(myheight > mywidth){
+		mywidth = innerHeight;
+		myheight = innerWidth;
+	}
+	var tmpwidth = (myheight*16)/9;
+		
+        document.getElementById("unityContainer").style.width = tmpwidth + "px";
         document.getElementById("unityContainer").style.height = myheight + "px";
     </script>
   </body>
