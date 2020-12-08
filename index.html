@@ -25,7 +25,7 @@
 	function resize(){
 		if(getOrientation()=="Landscape" && isMobileDevice()){
 			modifyScreenDimensions();
-			unityInstance.SetFullscreen(1);
+			document.getElementById("fullscreen").click();
 		}else if(getOrientation()=="Portrait" && isMobileDevice()){
 			unityInstance.SetFullscreen(0);
 			document.getElementById("unityContainer").style.width = defaultWidth;

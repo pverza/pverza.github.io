@@ -26,9 +26,8 @@
 		if(getOrientation()=="Landscape" && isMobileDevice()){
 			modifyScreenDimensions();
 			unityInstance.SetFullscreen(1);
-			unityInstance.SetFullscreen(1);
 		}else if(getOrientation()=="Portrait" && isMobileDevice()){
-			unityInstance.SetFullscreen(0)
+			unityInstance.SetFullscreen(0);
 			document.getElementById("unityContainer").style.width = defaultWidth;
 			document.getElementById("unityContainer").style.height = defaultHeight;
 		}else{
