@@ -14,7 +14,42 @@
   </head>
   <body>
     <div class="webgl-content">
-      <div id="unityContainer" style="width: 960px; height: 600px"></div>
+      <div id="unityContainer" style="display: table; width: 100%; height: 100%;"></div>
+	  <script>
+	window.onresize = function(){ resize(); }
+	resize();
+	
+	//------------------------------
+	function resize(){
+		if(getOrientation()=="Landscape" && isMobileDevice()){
+			modifyScreenDimensions();
+		}else{
+		    document.getElementById("unityContainer").style.width = "960px";
+			document.getElementById("unityContainer").style.height = "600px";
+		}
+	}
+	
+	function modifyScreenDimensions(){
+		var mywidth = innerWidth;
+		var myheight = innerHeight;
+
+		//var tmpwidth = (myheight*16)/9;
+	
+		//width: 960px; height: 600px
+		document.getElementById("unityContainer").style.width = mywidth + "px";
+		document.getElementById("unityContainer").style.height = myheight + "px";
+	};
+	
+	function getOrientation(){
+		var orientation = window.innerWidth > window.innerHeight ? "Landscape" : "Portrait";
+		return orientation;
+	};
+
+	function isMobileDevice() {
+		return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+	};
+
+    </script>
       <div class="footer">
         <div class="webgl-logo"></div>
         <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
