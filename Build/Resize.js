@@ -1,17 +1,8 @@
 	var defaultWidth = "960px";
 	var defaultHeight = "600px";
+	window.onresize = function(){ resize(); }
+	resize();
 	
-	
-	
-
-	$(document).ready(function () {
-		resize();
-		$(window).resize(function() {
-			resize();
-		});
-	});
-
-
 	//------------------------------
 	function resize(){
 		if(getOrientation()=="Landscape" && isMobileDevice()){
