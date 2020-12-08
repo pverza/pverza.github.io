@@ -10,7 +10,6 @@
     <script src="Build/UnityLoader.js"></script>
     <script>
       var unityInstance = UnityLoader.instantiate("unityContainer", "Build/pverza.github.io.json", {onProgress: UnityProgress});
-	  unityInstance.SetFullscreen(1);
     </script>
   </head>
   <body>
@@ -60,6 +59,9 @@
       <div class="footer">
         <div class="webgl-logo"></div>
         <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+		<script>
+		document.getElementById("fullscreen").click();
+		 </script>
         <div class="title">PaperDog</div>
       </div>
     </div>
