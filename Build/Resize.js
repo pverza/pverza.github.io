@@ -1,4 +1,4 @@
-var defaultWidth = "960px";
+var defaultWidth = "1066px";
 var defaultHeight = "600px";
 
 
