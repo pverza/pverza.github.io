@@ -1,7 +1,7 @@
 {
 "companyName": "DefaultCompany",
-"productName": "PaperDog",
-"productVersion": "0.1",
+"productName": "Lego",
+"productVersion": "1.1.4",
 "dataUrl": "pverza.github.io.data.unityweb",
 "wasmCodeUrl": "pverza.github.io.wasm.code.unityweb",
 "wasmFrameworkUrl": "pverza.github.io.wasm.framework.unityweb",
@@ -12,5 +12,5 @@
 "cacheControl": {"default": "must-revalidate"},
 "developmentBuild": false,
 "multithreading": false,
-"unityVersion": "2019.4.15f1"
+"unityVersion": "2019.4.20f1"
 }
